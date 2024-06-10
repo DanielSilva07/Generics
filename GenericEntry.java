@@ -1,34 +1,48 @@
 package br.com.danielsilva.Generics;
 
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
 public class GenericEntry<T> {
+    public static void main(String[] args) {
 
-    private T modelo;
-    private T type;
+        List<Carro> carros = new ArrayList<>();
+        carros.add(new Mazda());
+        carros.add(new Toyota());
+        carros.add(new Byd());
+
+        System.out.println(carros);
+        System.out.println(carros.isEmpty());
+        System.out.println(carros.size());
+
+//        Mazda mazda = new Mazda();
+//        Byd byd = new Byd();
+//
+//        byd.type();
+//        mazda.type();
 
 
-    public GenericEntry(T type , T modelo){
-        this.type = type;
-        this.modelo = modelo;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
-    public T getModelo() {
-        return modelo;
-    }
 
-    public T getType() {
-        return type;
-    }
 
-    @Override
-    public String toString() {
-        return "GenericEntry{" +
-                "modelo=" + modelo +
-                ", type=" + type +
-                '}';
-    }
+
 
 
 }
